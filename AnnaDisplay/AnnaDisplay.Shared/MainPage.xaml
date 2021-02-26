@@ -1,0 +1,88 @@
+﻿<Page
+    x:Class="AnnaDisplay.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AnnaDisplay"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="600" Height="1024">
+    
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Rectangle Height="1024" VerticalAlignment="Center" Width="600" Grid.ColumnSpan="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Assets/lowpoly.png"/>
+            </Rectangle.Fill>
+            <Rectangle.FocusVisualPrimaryBrush>
+                <ImageBrush/>
+            </Rectangle.FocusVisualPrimaryBrush>
+        </Rectangle>
+
+        <Rectangle HorizontalAlignment="Left" Margin="52,44,0,0" VerticalAlignment="Top" Width="495" Height="74" Fill="White" RadiusX="25" RadiusY="25" StrokeThickness="0"/>
+
+        <Button x:Name="homeBtn" HorizontalAlignment="Left" Height="44.11" Margin="85.85,59,0,0" VerticalAlignment="Top" Width="44.11" Click="OnHomeClick">
+            <Button.Background>
+                <ImageBrush ImageSource="/Assets/icons8_home.png"/>
+            </Button.Background>
+
+            <Button.Resources>
+                <ImageBrush x:Key="ButtonBackgroundPointerOver" ImageSource="/Assets/icons8_home.png" />
+                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent" />
+                <ImageBrush x:Key="ButtonBackgroundPressed" ImageSource="/Assets/icons8_home.png" />
+                <SolidColorBrush x:Key="ButtonBorderPressed" Color="Transparent" />
+            </Button.Resources>
+        </Button>
+        
+        <Button x:Name="newsBtn" HorizontalAlignment="Left" Height="44.11" Margin="214.16,59,0,0" VerticalAlignment="Top" Width="44.11" Click="OnNewsClick">
+            <Button.Background>
+                <ImageBrush ImageSource="/Assets/icons8_news_1.png"/>
+            </Button.Background>
+
+            <Button.Resources>
+                <ImageBrush x:Key="ButtonBackgroundPointerOver" ImageSource="/Assets/icons8_news_1.png" />
+                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent" />
+                <ImageBrush x:Key="ButtonBackgroundPressed" ImageSource="/Assets/icons8_news_1.png" />
+                <SolidColorBrush x:Key="ButtonBorderPressed" Color="Transparent" />
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="todoBtn" HorizontalAlignment="Left" Height="44.11" Margin="340,59,0,0" VerticalAlignment="Top" Width="44.11">
+            <Button.Background>
+                <ImageBrush ImageSource="/Assets/icons8_checklist_90px.png"/>
+            </Button.Background>
+
+            <Button.Resources>
+                <ImageBrush x:Key="ButtonBackgroundPointerOver" ImageSource="/Assets/icons8_checklist_90px.png" />
+                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent" />
+                <ImageBrush x:Key="ButtonBackgroundPressed" ImageSource="/Assets/icons8_checklist_90px.png" />
+                <SolidColorBrush x:Key="ButtonBorderPressed" Color="Transparent" />
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="settingsBtn" HorizontalAlignment="Left" Height="44.11" Margin="469.05,59,0,0" VerticalAlignment="Top" Width="44.11" BorderBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Foreground="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/Assets/icons8_settings.png"/>
+            </Button.Background>
+
+            <Button.Resources>
+                <ImageBrush x:Key="ButtonBackgroundPointerOver" ImageSource="/Assets/icons8_settings.png" />
+                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent" />
+                <ImageBrush x:Key="ButtonBackgroundPressed" ImageSource="/Assets/icons8_settings.png" />
+                <SolidColorBrush x:Key="ButtonBorderPressed" Color="Transparent" />
+            </Button.Resources>
+            
+        </Button>
+
+        <TextBlock x:Name="time_HM" HorizontalAlignment="Center" Margin="0,393,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="White" Foreground="White" FontSize="120" Text="11:30"/>
+
+        <TextBlock x:Name="day" HorizontalAlignment="Center" Margin="0,526,0,0" Text="Wednesday" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="40" Foreground="White"/>
+
+        <TextBlock x:Name="date" HorizontalAlignment="Center" Margin="0,572,0,0" Text="September 30, 2021" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" Foreground="White"/>
+
+        <Image x:Name="weatherIcon" HorizontalAlignment="Left" Height="122" Margin="135,827,0,0" VerticalAlignment="Top" Width="122" Source="{StaticResource sun}" />
+
+        <TextBlock x:Name="currentTempBlock" HorizontalAlignment="Left" Margin="272,844,0,0" Text="113°F" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="40"/>
+
+        <TextBlock x:Name="tempRangeBlock" HorizontalAlignment="Left" Margin="272,897,0,0" Text="High: 115°F - Low: 97°F" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,85 @@
+﻿<Page
+    x:Class="AnnaDisplay.Shared.newsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AnnaDisplay.Shared"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d" Width="600" Height="1024">
+
+    <Grid>
+        <Rectangle Height="1024" VerticalAlignment="Center" Width="600" Grid.ColumnSpan="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Assets/lowpoly.png"/>
+            </Rectangle.Fill>
+            <Rectangle.FocusVisualPrimaryBrush>
+                <ImageBrush/>
+            </Rectangle.FocusVisualPrimaryBrush>
+        </Rectangle>
+
+        <Rectangle HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" Width="495" Height="74" Fill="White" RadiusX="25" RadiusY="25" StrokeThickness="0"/>
+
+        <Button x:Name="homeBtn" Height="44.11" Margin="86,59,0,0" VerticalAlignment="Top" Width="44.11" Click="OnHomeClick">
+
+            <Button.Resources>
+                <ImageBrush x:Key="ButtonBackgroundPointerOver" ImageSource="85be5140-7672-4f1d-8c40-e42358b494e3" />
+                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent" />
+                <ImageBrush x:Key="ButtonBackgroundPressed" ImageSource="83c995b1-4671-4f3a-af98-04ad27301925" />
+                <SolidColorBrush x:Key="ButtonBorderPressed" Color="Transparent" />
+            </Button.Resources>
+            <Button.Background>
+                <ImageBrush ImageSource="/Assets/icons8_home.png"/>
+            </Button.Background>
+
+        </Button>
+
+        <Button x:Name="newsBtn" Height="44.11" Margin="214,59,0,0" VerticalAlignment="Top" Width="44.11" Click="OnNewsClick">
+
+            <Button.Resources>
+                <ImageBrush x:Key="ButtonBackgroundPointerOver" ImageSource="d825e155-a8d1-4e9c-9d7e-19467e50eee3" />
+                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent" />
+                <ImageBrush x:Key="ButtonBackgroundPressed" ImageSource="5848a27c-7ebd-424a-af12-b600fdc4f999" />
+                <SolidColorBrush x:Key="ButtonBorderPressed" Color="Transparent" />
+            </Button.Resources>
+            <Button.Background>
+                <ImageBrush ImageSource="/Assets/icons8_news_1.png"/>
+            </Button.Background>
+
+        </Button>
+
+        <Button x:Name="todoBtn" Height="44.11" Margin="340,59,0,0" VerticalAlignment="Top" Width="44.11">
+
+            <Button.Resources>
+                <ImageBrush x:Key="ButtonBackgroundPointerOver" ImageSource="3ec83521-7066-46bf-9490-291e5e5f40be" />
+                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent" />
+                <ImageBrush x:Key="ButtonBackgroundPressed" ImageSource="b7c21bdb-14ac-48d5-8877-d8dc52455deb" />
+                <SolidColorBrush x:Key="ButtonBorderPressed" Color="Transparent" />
+            </Button.Resources>
+            <Button.Background>
+                <ImageBrush ImageSource="/Assets/icons8_checklist_90px.png"/>
+            </Button.Background>
+
+        </Button>
+
+        <Button x:Name="settingsBtn" Height="44.11" Margin="469,59,0,0" VerticalAlignment="Top" Width="44.11" BorderBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Foreground="{x:Null}">
+
+            <Button.Resources>
+                <ImageBrush x:Key="ButtonBackgroundPointerOver" ImageSource="85b4f5ed-f457-42e4-9197-c1d18730c5f5" />
+                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent" />
+                <ImageBrush x:Key="ButtonBackgroundPressed" ImageSource="b681e53b-c384-4e1c-9d2c-b8684e45c408" />
+                <SolidColorBrush x:Key="ButtonBorderPressed" Color="Transparent" />
+            </Button.Resources>
+
+            <Button.Background>
+                <ImageBrush ImageSource="/Assets/icons8_settings.png"/>
+            </Button.Background>
+
+        </Button>
+
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" Margin="40,162,40,70">
+            <StackPanel x:Name="NewsStack" Orientation="Vertical" Width="520" Spacing="25">
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

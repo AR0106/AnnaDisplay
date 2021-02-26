@@ -1,0 +1,20 @@
+﻿<UserControl
+    x:Class="AnnaDisplay.Shared.ArticleControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AnnaDisplay.Shared"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="173"
+    d:DesignWidth="519">
+
+    <Grid>
+        <Border HorizontalAlignment="Center" Height="173" Background="White" BorderThickness="0" VerticalAlignment="Center" Width="519" CornerRadius="40">
+        </Border>
+        <TextBlock x:Name="ArticleTitle" Text="Biden admin under fire for removing Oval Office statue, offers this as his defense" TextWrapping="WrapWholeWords" Width="456" Height="54" Margin="31,12,32,107" FontFamily="Segoe UI Bold" FontSize="20" Foreground="Black" FontWeight="Bold"/>
+        <TextBlock x:Name="ArticleTopic" Text="Politics - Fox News" TextWrapping="WrapWholeWords" Width="456" Height="20" Margin="31,65,32,88" FontFamily="Segoe UI Bold" FontSize="15" Foreground="#808080" FontWeight="Bold"/>
+        <TextBlock x:Name="ArticleLinkText" Foreground="Blue" Text="https://www.foxnews.com/politics/biden-administration-defends-removing-churchill-statue-from-oval-office" TextWrapping="WrapWholeWords" Width="431" Margin="44,97,44,28"/>
+
+    </Grid>
+</UserControl>
